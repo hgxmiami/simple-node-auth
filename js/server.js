@@ -1,9 +1,12 @@
 var port = 3001;
 var express = require('express');
 var app = express();
+var path = require('path');
 
 app.get("/", function(req,res){
-    res.end("hello world is bojangles");
+    res.sendFile(path.resolve("views/register.html"));
 });
-    
+
+
+
 app.listen(port);
