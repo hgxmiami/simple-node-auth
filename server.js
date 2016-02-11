@@ -30,10 +30,7 @@ app.post("/", function(req,res){
     res.end("Username and password both required");
     return;
   }
-  var hash = crypto
-      .createHash("md5")
-      .update(req.body.password)
-      .digest('hex');
+ 
   
   var userNameInRequest = req.body.username;
   userStore[userNameInRequest] = { hasedPassword: hash,
@@ -42,9 +39,31 @@ app.post("/", function(req,res){
   console.log(JSON.stringify(userStore));
 });
 
+app.post("/login", function(req, res){
+   //if username doesnt exist in user store, return error
+    if ( !req.body.username || !req.body.password){
+        res.end("Username and password required");
+        return;
+    }
+    if ( !userStore[req.body.username] ){
+        res.end("That user doesnt exist yet. Please register.");
+        return;
+    }
+   var hash = crypto
+      .createHash("md5")
+      .update(req.body.password)
+      .digest('hex'); 
+    if (userStore[req.body.username].hashedPassword != hash) {
+        res.edu("Your password was wrong");
+        return;
+    }
+    res.edu("Congratulations, your logged in");
+    console.log("User "+req.body.username+" logged in")
+});
 
 
 app.listen(port);
 console.log("Server listening at port "+port);
 console.log("Current user store is :");
 console.log(JSON.stringify(userStore));
+
