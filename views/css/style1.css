@@ -1,0 +1,170 @@
+
+span{
+    display: block;
+    font: bold 10px "Arial", "Helvetica", sans-serif;
+    color: #000;
+    text-align: center;
+}
+
+.board {
+    background: #EBEBE0;
+    width: 808px;
+}
+.row{
+    background: #fff;  
+    float: left;
+    margin-bottom: 2px;
+}
+#row1, #row3 {
+    height: 82px;
+    width: 788px;
+}
+#row2 {
+    width: 788px;
+
+}
+.col1{
+    float: left;
+    width: 75px;
+}
+.col3{
+    float: right;
+    margin-right: 2px;
+    width: 75px;
+}
+/*******************************
+Board positions - Box
+********************************/
+.box {
+    background: #fff;
+    border: 1px solid #000;
+    float: left;
+    height: 80px;
+    width: 75px;
+}
+div #box-x:last-child {
+    margin-right: 0;
+}
+#box-x{
+    margin-right: 2px;
+    background: green;
+}
+#box-y{
+    margin-bottom: 2px;
+    background: red;
+}
+div #box-y:last-child {
+    margin-bottom: 0;
+}
+/*******************************
+Board positions - Title
+********************************/
+.title{
+    background: black;
+    border-bottom: 1px solid #000;
+    line-height: 16px;
+}
+#blanktitle{
+    background: none;
+    border-color: #fff;
+}
+#pink{
+    background: #ff4f72;
+}
+/*******************************
+Board positions - Runway
+********************************/
+.runway{
+    background: aliceblue;
+    height: 12px;
+    margin: 2px 0 2px 0;
+}
+.piece{
+    background-image:url('../img/piece2.png');
+    float: left;
+    height:12px;
+    margin-left: 2px;
+    width: 12px;
+}
+/*******************************
+Board positions - Body
+********************************/
+.cardbody{
+    background: white;
+    height:32px;
+}
+.icons{
+    background-repeat: no-repeat;
+    width: 32px;
+    height: 32px;
+    margin: 0 auto 0 auto;
+}
+#airport{
+
+}
+#chest{
+
+}
+
+/*******************************
+Board positions - Price
+********************************/
+.price{
+    line-height: 12px;
+    margin: 2px 0 2px 0;
+    text-align: center;
+    width: 100%;
+}
+.btn{
+    width:200px;
+    margin: 10px auto;
+    text-align: center;
+    background: #bfe5ff;
+    background-image: -webkit-linear-gradient(top, #bfe5ff, #3fb4fc);
+    background-image: -moz-linear-gradient(top, #bfe5ff, #3fb4fc);
+    background-image: -ms-linear-gradient(top, #bfe5ff, #3fb4fc);
+    background-image: -o-linear-gradient(top, #bfe5ff, #3fb4fc);
+    background-image: linear-gradient(to bottom, #bfe5ff, #3fb4fc);
+    -webkit-border-radius: 23;
+    -moz-border-radius: 23;
+    border-radius: 23;
+    text-shadow: 1px 1px 3 px #666666;
+    font-family: Georgia;
+    color: #ffffff;
+    font-size: 20px;
+    padding: 10px 30px 10px 20px;
+    text-decoration: none;
+}
+#toad{
+    height: 50px;
+    width: 50px;
+    position: relative;
+    transition: all 1s;
+    top: 60px;
+    right: 30px;
+    
+}
+#red{
+    height: 50px;
+    width: 50px;
+}
+#ocean{
+    height: 80px;
+    width: 75px;
+}
+#shark{
+    height: 80px;
+    width: 75px;
+}
+#dice {
+    position: absolute;
+    border: 2px solid black;
+    width: 100px;
+    height: 72px;
+    top: 400px;
+    left: 350px;
+    font-size: 40px;
+    text-align: center;
+    padding-top: 28px;
+    
+}

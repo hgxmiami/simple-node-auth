@@ -35,7 +35,7 @@ app.post("/", function(req,res){
  
   
   var userNameInRequest = req.body.username;
-  userStore[userNameInRequest] = { hasedPassword: hash,
+  userStore[userNameInRequest] = { hashedPassword: hash,
                                   email: req.body.email};
   res.end('Thanks for registering ' + userNameInRequest);
   console.log(JSON.stringify(userStore));
@@ -59,7 +59,8 @@ app.post("/login", function(req, res){
         res.edu("Your password was wrong");
         return;
     }
-    res.edu("Congratulations, your logged in");
+    //res.end("Congratulations, your logged in");
+    res.sendFile(path.resolve("password-protected-views/something.html"));
     console.log("User "+req.body.username+" logged in")
 });
 
