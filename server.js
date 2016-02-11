@@ -21,7 +21,9 @@ app.get("/", function(req, res){
   res.sendFile(path.resolve("views/register.html"));
 });
 
-
+app.get("login", function(req,res) {
+    res.sendFile(path.resolve("views/login.html"));
+});
 //REGISTRATION ROUTE
 app.post("/", function(req,res){
   //if they didn't send a username or didnt send a
